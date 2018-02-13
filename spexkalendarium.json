@@ -1,0 +1,167 @@
+[
+  {
+    "spex": "Gustav III",
+    "or": "Svårigheten att komma till skott",
+    "events": [
+      {
+        "event_name": "Internat, Barnens ö",
+        "date": "2010-09-17",
+        "end_date": "2010-09-19",
+        "category": "turne"
+      },
+      {
+        "event_name": "Happening",
+        "date": "2010-10-02",
+        "category": "genomdrag"
+      },
+      {
+        "event_name": "Spexbastu",
+        "date": "2010-10-18",
+        "category": "slask"
+      },
+      {
+        "event_name": "Smygis, Årsta Folkets Hus",
+        "date": "2010-06-11",
+        "category": "genomdrag"
+      },
+      {
+        "event_name": "Affeafton",
+        "date": "2010-11-07",
+        "category": "extra"
+      },
+      {
+        "event_name": "Biljettsläpp",
+        "date": "2010-11-08",
+        "category": "extra"
+      },
+      {
+        "event_name": "Genrep, Södra Teatern",
+        "date": "2010-11-29",
+        "category": "föreställning"
+      },
+      {
+        "event_name": "Premiär, Södra Teatern",
+        "date": "2010-11-30",
+        "category": "föreställning"
+      },
+      {
+        "event_name": "Föreställning, Södra Teatern",
+        "date": "2010-12-01",
+        "category": "föreställning"
+      },
+      {
+        "event_name": "FEST!",
+        "date": "2010-12-04",
+        "category": "slask"
+      },
+      {
+        "event_name": "Höstmöte, L1",
+        "date": "2010-12-06",
+        "category": "möte"
+      },
+      {
+        "event_name": "Spexluciabastu",
+        "date": "2010-12-13",
+        "category": "slask"
+      },
+      {
+        "event_name": "Finlandsturné",
+        "date": "2011-02-04",
+        "end_date": "2011-02-08",
+        "category": "turne"
+      },
+      {
+        "event_name": "Föreställning, Intiman",
+        "date": "2011-03-01",
+        "category": "föreställning"
+      },
+      {
+        "event_name": "Bjupp, Intiman + Fest",
+        "date": "2011-03-02",
+        "category": "föreställning"
+      },
+      {
+        "event_name": "KTH-anställda, Intiman",
+        "date": "2011-03-03",
+        "category": "föreställning"
+      },
+      {
+        "event_name": "Slaskfest med bastu",
+        "date": "2011-03-11",
+        "category": "slask"
+      },
+      {
+        "event_name": "Vårmöte, L1",
+        "date": "2011-03-21",
+        "category": "möte"
+      },
+      {
+        "event_name": "Karlstadsturné",
+        "date": "2011-04-08",
+        "end_date": "2011-04-10",
+        "category": "turné"
+      },
+      {
+        "event_name": "Föreställning, Södra Teatern",
+        "date": "2011-05-02",
+        "category": "föreställning"
+      },
+      {
+        "event_name": "Gamla spexare-föreställning, Södra Teatern",
+        "date": "2011-05-03",
+        "category": "föreställning"
+      },
+      {
+        "event_name": "Föreställning, Södra Teatern",
+        "date": "2011-05-04",
+        "category": "föreställning"
+      },
+      {
+        "event_name": "Gamla Spexare-fest",
+        "date": "2011-05-06",
+        "category": "fest"
+      },
+      {
+        "event_name": "Slaskfest",
+        "date": "2011-05-21",
+        "category": "slask"
+      },
+      {
+        "event_name": "Tennstopet",
+        "date": "2011-06-05",
+        "category": "extra"
+      },
+      {
+        "event_name": "Mariefredsturné",
+        "date": "2011-06-11",
+        "end_date": "2011-06-12",
+        "category": "turne"
+      },
+      {
+        "event_name": "Slaskföreställning, Södra Teatern",
+        "date": "2011-08-28",
+        "category": "fest"
+      },
+      {
+        "event_name": "n0lleföreställning, Södra Teatern",
+        "date": "2011-08-29",
+        "category": "fest"
+      },
+      {
+        "event_name": "KTH Alumni, Södra Teatern",
+        "date": "2011-08-30",
+        "category": "fest"
+      },
+      {
+        "event_name": "n0lleföreställning, Södra Teatern",
+        "date": "2011-08-31",
+        "category": "fest"
+      },
+      {
+        "event_name": "Slutfest",
+        "date": "2011-09-03",
+        "category": "fest"
+      }
+    ]
+  }
+]
