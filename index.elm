@@ -6,6 +6,8 @@ import Html.Attributes exposing (..)
 import Html.Events exposing (..)
 import Http
 import Json.Decode as Decode
+import Json.Decode.Pipeline exposing (decode, required)
+import Date
 
 
 
@@ -24,7 +26,8 @@ main =
 
 type alias Model =
   { topic : String
-  , data : Test
+  , data : Spex
+  , kalendarium : List Spex
   }
 
 type alias Test =
@@ -32,11 +35,25 @@ type alias Test =
   , string : String
   }
 
-startTest = Test 3 "lol"
+type alias Event =
+  { event_name : String
+  , date : String --Date.Date
+  --, end_date : Maybe Date.Date
+  , category : String
+  }
+
+type alias Spex =
+  { spex : String
+  , or : String
+  , year : Int
+  , events : List Event
+  }
+
+startTest = Spex "g3" "svår" 2010 []
 
 init : String -> (Model, Cmd Msg)
 init topic =
-  ( Model topic startTest
+  ( Model topic startTest []
   , fetch
   )
 
@@ -46,7 +63,7 @@ init topic =
 
 
 type Msg
-  = Data (Result Http.Error String)
+  = Data (Result Http.Error Spex)
 
 
 update : Msg -> Model -> (Model, Cmd Msg)
@@ -54,9 +71,11 @@ update msg model =
   case msg of
     Data (Ok data) ->
       Debug.log (toString data)
-      (model, Cmd.none)
+      --(Model model.topic data model.kalendarium, Cmd.none)
+      ({model | data = data}, Cmd.none)
 
-    Data (Err _) ->
+    Data (Err message) ->
+      Debug.log (toString message)
       (model, Cmd.none)
 
 
@@ -68,7 +87,7 @@ view : Model -> Html Msg
 view model =
   div []
     [ h2 [] [text model.topic]
-    , div [] [text model.data.string]
+    , div [] [text (toString model.data)]
     ]
 
 
@@ -86,8 +105,22 @@ subscriptions model =
 
 fetch : Cmd Msg
 fetch =
-  Http.send Data (Http.get "/test.json" decodeData)
+  Http.send Data (Http.get "/spexkalendarium.json" decodeData)
 
-decodeData : Decode.Decoder String
+decodeData : Decode.Decoder Spex
 decodeData =
-  Decode.at ["string"] Decode.string
+  --Maybe.map2 Test (Decode.field "num" Decode.int) (Decode.field "string" Decode.string)
+  decode Spex
+    |> Json.Decode.Pipeline.required "spex" Decode.string
+    |> Json.Decode.Pipeline.required "or" Decode.string
+    |> Json.Decode.Pipeline.required "year" Decode.int
+    |> Json.Decode.Pipeline.required "events" (Decode.list
+      (
+        decode Event
+        |> Json.Decode.Pipeline.required "event_name" Decode.string
+        |> Json.Decode.Pipeline.required "date" Decode.string
+        |> Json.Decode.Pipeline.required "category" Decode.string
+      )
+    )
+    
+
